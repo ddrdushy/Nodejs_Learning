@@ -2,6 +2,7 @@ var http = require("http");
 var fs = require("fs");
 
 http.createServer(function(request,response){
+    debugger;
     console.log(`Request Coming from: ${request.url}`);
 
     if(request.url.startsWith("/static/")){
