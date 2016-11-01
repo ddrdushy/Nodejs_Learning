@@ -5,6 +5,13 @@ http.createServer(function(request,response){
     console.log(`Request Coming from: ${request.url}`);
 
     if(request.url.startsWith("/static/")){
+        fs.readFile(request.url.substr(1),(error,data)=>{
+            if(error){
+                console.log("Error: file not found "+ error);
+                response.statusCode=404;
+            }
+            
+        });
         return ;
     }
 
