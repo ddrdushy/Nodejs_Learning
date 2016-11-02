@@ -1,11 +1,11 @@
 var http=require("http");
-var serverStaticContent=require("./static.js");
+var static=require("./static.js");
 
 http.createServer(function(req,res){
     console.log(req.url);
 
-    if(req.url.startsWith('/static/')){
-        serverStaticContent(req,res);
+    if(static.canHandleRequest(req)){
+        static.serverStaticAssets(req,res);
         return;
     }
     res.end("Hello World");
