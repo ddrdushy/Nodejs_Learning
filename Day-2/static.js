@@ -1,5 +1,12 @@
 var fs=require("fs");
-function serverStaticContent(req,res) {
+
+function canHandleRequest(req){
+    return req.url.startsWith('/static/');
+}
+
+exports.canHandleRequest=canHandleRequest;
+
+function serverStaticAssets(req,res) {
     fs.readFile(req.url.substr(1), (err, data)=> {
         if (err) {
             console.log("error: File Not Found " + err);
@@ -11,4 +18,4 @@ function serverStaticContent(req,res) {
     });
 }
 
-module.exports = serverStaticContent;
+exports.serverStaticAssets = serverStaticAssets;
