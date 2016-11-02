@@ -1,19 +1,11 @@
 var http=require("http");
-var fs=require("fs");
+var serverStaticContent=require("./static.js");
 
 http.createServer(function(req,res){
     console.log(req.url);
 
     if(req.url.startsWith('/static/')){
-        fs.readFile(req.url.substr(1),(err,data)=>{
-            if(err){
-                console.log("error: File Not Found "+ err);
-                res.statusCode=404;
-                res.end();
-                return;
-            }
-            res.end(data);
-        });
+        serverStaticContent(req,res);
         return;
     }
     res.end("Hello World");
