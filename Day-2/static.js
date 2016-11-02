@@ -12,8 +12,8 @@ function serverStaticAssets(req,res) {
     if(url==="favicon.ico"){
         url='static/favicon.ico'
     }
-    
-    fs.readFile(url, (err, data)=> {
+
+    fs.readFile(url, function callback (err, data) {
         if (err) {
             console.log("error: File Not Found " + err);
             res.statusCode = 404;
