@@ -1,9 +1,16 @@
 {
   "name": "day_3",
   "version": "1.0.0",
-  "description": "",
   "dependencies": {
     "serve-favicon": "latest",
     "express": "latest"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server-expres.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "MIT",
+  "description": ""
 }
