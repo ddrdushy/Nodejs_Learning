@@ -1,5 +1,9 @@
 {
   "name": "day_3",
   "version": "1.0.0",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "serve-favicon": "latest",
+    "express": "latest"
+  }
 }
