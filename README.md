@@ -13,15 +13,15 @@ Node.js Learning
   revised the previous day sessions and created the script again without get help.
 ### 05-Nov-2016
   started to learn about npm commands,
-    * npm star
-    * npm run <script>
-    * npm search <keyword>
-    * npm ls --depth= <0/1>
-    * npm help <command>
-    * npm docs <package name>
-    * npm repo <package name>
-    * npm view <package name> versions
-    * npm install <package name>@<version> --save
-    * npm login
-    * npm stars
-    * npm update <package name>
+* npm star
+* npm run <script>
+* npm search <keyword>
+* npm ls --depth= <0/1>
+* npm help <command>
+* npm docs <package name>
+* npm repo <package name>
+* npm view <package name> versions
+* npm install <package name>@<version> --save
+* npm login
+* npm stars
+* npm update <package name>
