@@ -1,5 +1,6 @@
 var http=require("http");
 var static=require("./static.js");
+static=require("./static.js");
 
 setTimeout(function(){
 

@@ -1,5 +1,6 @@
 var fs=require("fs");
 
+console.log("Executing the static module");
 function canHandle(res){
     return res.url.startsWith("/static/")||
             res.url.startsWith("/favicon.ico");
