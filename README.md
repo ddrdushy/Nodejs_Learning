@@ -25,3 +25,7 @@ Node.js Learning
 * npm login
 * npm stars
 * npm update `<package name>`
+
+### 05-Nov-2016
+  the final episode of the course is covered some environment setup with webstrom editor for node development.
+  this course will continue with `Node.js Web Apps with Express` to create a chat application using `node.js`.
