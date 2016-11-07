@@ -29,3 +29,5 @@ Node.js Learning
 ### 05-Nov-2016
   the final episode of the course is covered some environment setup with webstrom editor for node development.
   this course will continue with `Node.js Web Apps with Express` to create a chat application using `node.js`.
+### 06-Nov-2016
+  started to working on the chat application creation using `express.js`. created the server and installed bootstrap. Added the `index.html` and custom css file to the application.
