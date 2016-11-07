@@ -4,7 +4,10 @@ var app=express();
 app.use(express.static("public"));
 app.use(express.static("node_modules/bootstrap/dist"));
 
-app.get("/hello",(req,res)=>{
+app.get("/",(req,res)=>{
+    res.render("index.jade");
+});
+app.get("/admin/rooms",(req,res)=>{
     res.render("rooms.jade");
 });
 
