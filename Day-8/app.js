@@ -23,6 +23,9 @@ app.get("/admin/rooms/add",(req,res)=>{
     res.render("add");
 });
 
+app.post("/admin/rooms/add",(req,res)=>{
+    res.send("nothing");
+});
 app.listen(3000,function(){
     console.log("Chat app listening on port 3000");
 });
