@@ -2,6 +2,7 @@ var express=require("express");
 var app=express();
 var rooms=require("./data/rooms.json");
 var bodyParser=require("body-parser");
+var uuid=require("node-uuid");
 
 app.set("views","./views");
 app.set('view engine','jade');
@@ -26,7 +27,12 @@ app.get("/admin/rooms/add",(req,res)=>{
 });
 
 app.post("/admin/rooms/add",(req,res)=>{
-    res.send("nothing");
+    var room={
+        name:req.body.name,
+        id:uuid.v4()
+    };
+    rooms.push(room);
+    res.json(room);
 });
 app.listen(3000,function(){
     console.log("Chat app listening on port 3000");
