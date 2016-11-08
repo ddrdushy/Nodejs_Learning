@@ -35,4 +35,4 @@ Node.js Learning
   Created the pages with `jade view engine` and understand the jade engine syntax. passed the json data to the view.
 
 ### 08-Nov-2016
-  Worked with C.R.U.D Operations without database and those data are published to the view.
+  Worked with C.R.U.D Operations without database (used array of data) and those data are published to the view.
