@@ -26,9 +26,13 @@ Node.js Learning
 * npm stars
 * npm update `<package name>`
 
-### 05-Nov-2016
+### 06-Nov-2016
   the final episode of the course is covered some environment setup with webstrom editor for node development.
   this course will continue with `Node.js Web Apps with Express` to create a chat application using `node.js`.
-### 06-Nov-2016
+
+### 07-Nov-2016
   started to working on the chat application creation using `express.js`. created the server and installed bootstrap. Added the `index.html` and custom css file to the application.</br>
   Created the pages with `jade view engine` and understand the jade engine syntax. passed the json data to the view.
+
+### 08-Nov-2016
+  Worked with C.R.U.D Operations without database and those data are published to the view.
