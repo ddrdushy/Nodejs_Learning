@@ -47,7 +47,10 @@ app.get("/admin/rooms/delete/:id",(req,res)=>{
 app.post("/admin/rooms/edit/:id",(req,res)=>{
     var roomId=req.params.id;
     var room=_.find(rooms,r => r.id === roomId);
-
+    if(!room){
+        res.sendStatus(404);
+        return;
+    }
     room.name=req.body.name;
 
     res.redirect("/admin/rooms");
@@ -56,7 +59,10 @@ app.post("/admin/rooms/edit/:id",(req,res)=>{
 app.get("/admin/rooms/edit/:id",(req,res)=>{
     var roomId=req.params.id;
     var room=_.find(rooms,r => r.id === roomId);
-
+    if(!room){
+        res.sendStatus(404);
+        return;
+    }
     res.render("edit",{room});
 });
 app.listen(3000,function(){
