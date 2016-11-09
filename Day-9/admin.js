@@ -34,22 +34,19 @@ router.get("/rooms/delete/:id", (req, res)=> {
     });
 
 router.route("/rooms/edit/:id")
-    .post((req, res)=> {
+    .all((req,res,next)=>{
         var roomId = req.params.id;
         var room = _.find(rooms, r => r.id === roomId);
         if (!room) {
             res.sendStatus(404);
             return;
         }
-        room.name = req.body.name;
-
+        res.locals.room=room;
+        next();
+    })
+    .post((req, res)=> {
+        res.locals.room.name = req.body.name;
         res.redirect(req.baseUrl+"/rooms");
     }).get((req, res)=> {
-        var roomId = req.params.id;
-        var room = _.find(rooms, r => r.id === roomId);
-        if (!room) {
-            res.sendStatus(404);
-            return;
-        }
-        res.render("edit", {room});
+        res.render("edit");
     });
