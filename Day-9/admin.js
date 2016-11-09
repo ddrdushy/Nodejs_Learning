@@ -13,17 +13,17 @@ router.get("/rooms", (req, res)=> {
         });
     });
 
-router.get("/rooms/add", (req, res)=> {
+router.route("/rooms/add")
+    .get( (req, res)=> {
         res.render("add");
-    });
-
-router.post("/rooms/add", (req, res)=> {
+    })
+    .post((req, res)=> {
         var room = {
             name: req.body.name,
             id: uuid.v4()
         };
         rooms.push(room);
-        res.redirect(req.baseUrl+"/rooms");
+        res.redirect(req.baseUrl + "/rooms");
     });
 
 router.get("/rooms/delete/:id", (req, res)=> {
@@ -33,7 +33,8 @@ router.get("/rooms/delete/:id", (req, res)=> {
         res.redirect(req.baseUrl+"/rooms");
     });
 
-router.post("/rooms/edit/:id", (req, res)=> {
+router.route("/rooms/edit/:id")
+    .post((req, res)=> {
         var roomId = req.params.id;
         var room = _.find(rooms, r => r.id === roomId);
         if (!room) {
@@ -43,9 +44,7 @@ router.post("/rooms/edit/:id", (req, res)=> {
         room.name = req.body.name;
 
         res.redirect(req.baseUrl+"/rooms");
-    });
-
-router.get("/rooms/edit/:id", (req, res)=> {
+    }).get((req, res)=> {
         var roomId = req.params.id;
         var room = _.find(rooms, r => r.id === roomId);
         if (!room) {
