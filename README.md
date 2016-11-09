@@ -36,3 +36,7 @@ Node.js Learning
 
 ### 08-Nov-2016
   Worked with C.R.U.D Operations without database (used array of data) and those data are published to the view.
+
+### 09-Nov-2016
+  Start with Refactoring of `app.js` file and route is chained by using `express.route`. Learn about the middleware and how to write custom middleware using `express.js`.
+  started to build `api` to serve data to front-end modules. done the `C.R.U.D` operations to the user messages, expect update.
