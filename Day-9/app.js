@@ -10,7 +10,8 @@ app.use(express.static("node_modules/bootstrap/dist"));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use((req,res,next)=>{
-   console.log(`Incomming Request: ${req.url}`);
+    console.log(`Incomming Request: ${req.url}`);
+    next();
 });
 
 app.get("/",(req,res)=>{
