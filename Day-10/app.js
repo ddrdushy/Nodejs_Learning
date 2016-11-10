@@ -21,8 +21,10 @@ app.use(bodyParser.json());
 
 
 app.get("/",(req,res)=>{
-    throw new Error("Asd");
-    res.render("home",{title:"Home"});
+    setTimeout(()=>{
+        res.render("home",{title:"Home"});
+    },1000);
+
 });
 
 var adminRouter=require("./admin");
