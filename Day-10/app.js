@@ -19,7 +19,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 
+
 app.get("/",(req,res)=>{
+    throw new Error("Asd");
     res.render("home",{title:"Home"});
 });
 
@@ -28,6 +30,10 @@ app.use("/admin",adminRouter);
 
 var apiRouter=require("./api");
 app.use("/api",apiRouter);
+
+app.use((err,req,res,next)=>{
+    res.send("Error Handler");
+});
 
 app.listen(3000,function(){
     console.log("Chat app listening on port 3000");
