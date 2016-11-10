@@ -20,9 +20,14 @@ app.use(bodyParser.json());
 
 
 
-app.get("/",(req,res)=>{
+app.get("/",(req,res,next)=>{
     setTimeout(()=>{
-        res.render("home",{title:"Home"});
+        try{
+            throw new Error("oh no");
+            res.render("home",{title:"Home"});
+        }catch(error){
+            next(error);
+        }
     },1000);
 
 });
