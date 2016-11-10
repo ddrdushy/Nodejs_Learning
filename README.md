@@ -40,3 +40,7 @@ Node.js Learning
 ### 09-Nov-2016
   Start with Refactoring of `app.js` file and route is chained by using `express.route`. Learn about the middleware and how to write custom middleware using `express.js`.
   started to build `api` to serve data to front-end modules. done the `C.R.U.D` operations to the user messages, expect update.
+
+### 10-Nov-2016
+  Learned about logging for the application by using `morgon`. used `express-debug` package for display the debugging information during the development. Added the application run settings to get debug log with `DEBUG=express:*` command. </br>
+  used `NODE_ENV=production` to not display the stack trace errors. Created some errors and handled with some methods to protect the application. Final chapter with login authentication using `passport`.
