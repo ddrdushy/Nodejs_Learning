@@ -21,15 +21,10 @@ app.use(bodyParser.json());
 
 
 app.get("/",(req,res,next)=>{
-    setTimeout(()=>{
-        try{
-            throw new Error("oh no");
-            res.render("home",{title:"Home"});
-        }catch(error){
-            next(error);
-        }
-    },1000);
-
+    fs.readFile("./data/roomss.json","utf8",(err,data)=>{
+        if(err){next(err);return;}
+       res.send(data);
+    });
 });
 
 var adminRouter=require("./admin");
