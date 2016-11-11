@@ -44,3 +44,6 @@ Node.js Learning
 ### 10-Nov-2016
   Learned about logging for the application by using `morgon`. used `express-debug` package for display the debugging information during the development. Added the application run settings to get debug log with `DEBUG=express:*` command. </br>
   used `NODE_ENV=production` to not display the stack trace errors. Created some errors and handled with some methods to protect the application. Final chapter with login authentication using `passport`.
+
+### 11-Nov-2016
+  installed `passport` and `passport-local` packages to do local authentication. understand the flow of authentication. completed the login process.
