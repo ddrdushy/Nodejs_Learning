@@ -1,14 +1,12 @@
 var express=require("express");
 var app=express();
 var bodyParser=require("body-parser");
+var passport=require("passport");
 
 app.set("views","./views");
 app.set('view engine','jade');
 
-var fs=require("fs");
-var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'})
-
-app.use(require("morgan")("combined",{stream:accessLogStream}));
+app.use(require("./logging.js"));
 
 app.use(express.static("public"));
 app.use(express.static("node_modules/bootstrap/dist"));
@@ -23,6 +21,9 @@ app.use(bodyParser.json());
 app.get("/",(req,res,next)=>{
     res.render("home",{title:"Home"});
 });
+
+var authRouter = require("./auth");
+app.use(authRouter);
 
 var adminRouter=require("./admin");
 app.use("/admin",adminRouter);
