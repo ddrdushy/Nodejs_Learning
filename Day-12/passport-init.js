@@ -15,9 +15,10 @@ passport.use(new LocalStrategy((username, password, done)=>{
 }));
 
 passport.serializeUser((user,done)=>{
-    done(null,user);
+    done(null,user.id);
 });
 
-passport.deserializeUser((user,done)=>{
+passport.deserializeUser((id,done)=>{
+    var user= _.find(users,u => u.id === id);
     done(null,user);
 });
