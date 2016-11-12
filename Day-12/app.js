@@ -28,6 +28,7 @@ app.use(authRouter);
 
 app.use((req,res,next)=>{
     if(req.isAuthenticated()){
+        res.locals.user=req.user;
         next();
         return;
     }
