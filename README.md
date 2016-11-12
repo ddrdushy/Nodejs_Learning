@@ -47,3 +47,6 @@ Node.js Learning
 
 ### 11-Nov-2016
   installed `passport` and `passport-local` packages to do local authentication. understand the flow of authentication. completed the login process.
+
+### 12-Nov-2016
+  Added the logout option and passed some more information with messages. restricted access for admin modules. added the few lines of code for development environment. course is completed. :smile:
