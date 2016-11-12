@@ -23,13 +23,22 @@ app.use(require("express-session")({
 app.use(passport.initialize());
 app.use(passport.session());
 
+var authRouter = require("./auth");
+app.use(authRouter);
+
+app.use((req,res,next)=>{
+    if(req.isAuthenticated()){
+        next();
+        return;
+    }
+    res.redirect("/login");
+});
 
 app.get("/",(req,res,next)=>{
     res.render("home",{title:"Home"});
 });
 
-var authRouter = require("./auth");
-app.use(authRouter);
+
 
 var adminRouter=require("./admin");
 app.use("/admin",adminRouter);
