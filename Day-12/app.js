@@ -39,10 +39,11 @@ app.get("/",(req,res,next)=>{
     res.render("home",{title:"Home"});
 });
 
-
-
 var adminRouter=require("./admin");
 app.use("/admin",adminRouter);
+
+var userRouter=require("./user");
+app.use("/admin/users",userRouter);
 
 var apiRouter=require("./api");
 app.use("/api",apiRouter);
