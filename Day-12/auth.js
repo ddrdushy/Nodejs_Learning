@@ -7,7 +7,7 @@ var router=express.Router();
 module.exports=router;
 
 router.get("/login",(req,res)=>{
-    if(req.app.get("env") === "development"){
+   /* if(req.app.get("env") === "development"){
         var user=users[0];
 
         if(req.query.user){
@@ -19,7 +19,7 @@ router.get("/login",(req,res)=>{
             return res.redirect("/");
         });
         return;
-    }
+    }*/
     res.render("login");
 });
 
