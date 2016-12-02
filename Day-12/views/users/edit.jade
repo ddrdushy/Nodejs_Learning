@@ -6,6 +6,10 @@ block content
     form(method="post")
         fieldset.form-group
             label(for="name") Name:
-            input.form-control(name="name",input="text", placeholder="Enter a name",value="#{room.name}")
+            input.form-control(name="name",input="text", placeholder="Enter a name",value="#{user.name}")
+            label(for="password") Password:
+            input.form-control(name="password",type="password", placeholder="Enter a Password")
+            label(for="admin") Admin &nbsp &nbsp
+            input.text-center(name="admin",type="checkbox",checked,value="true")
         button.btn.btn-primary(type="submit") Save user
         a.btn.btn-primary(href="/admin/user") Cancel

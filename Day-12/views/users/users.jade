@@ -2,7 +2,7 @@ extends ../layout
 
 block content
     h1 Chat Rooms:
-    a.btn.btn-primary(href="/admin/user/add") Create a New Chat Room
+    a.btn.btn-primary(href="/admin/users/add") Add a New user
     table.table.table-striped
         thead
             tr
@@ -11,11 +11,11 @@ block content
                 th
                 th ID
         tbody
-            each room in rooms
+            each user in users
                 tr
-                    td(style="width:50px;"): a(href="/admin/user/delete/#{room.id}")
+                    td(style="width:50px;"): a(href="/admin/users/delete/#{user.id}")
                         span.glyphicon.glyphicon-remove
-                    td= room.name
-                    td(style="width:50px;"): a(href="/admin/user/edit/#{room.id}")
+                    td= user.name
+                    td(style="width:50px;"): a(href="/admin/users/edit/#{user.id}")
                         span.glyphicon.glyphicon-pencil
-                    td= room.id
+                    td= user.id
